@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <nav>
+            <!-- <a href="index.html"><img src="images/NITWLOGO.png"></a> -->
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="{{ url_for('tohome') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <table>
+            <tr>
+                <div class="heading">
+                    CRIMINAL IDENTIFICATION SYSTEM
+                </div>
+            </tr>
+            <tr>
+                <td>
+                    <div class="emptyspace"></div>
+                </td>
+                <td>
+                    <div class="card">
+                        <a href="{{ url_for('scan') }}"><img src='static/facescanlogo.png' alt="Avatar" style="width:60%; padding-left: 20%;"></a>
+                        <div class="container">
+                        <h4><b>Identify a criminal</b></h4>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="emptyspace"> </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <a href="{{ url_for('addnew') }}"><img src='static/new-user.png' alt="Avatar" style="width:65%; padding-left: 20%;"></a>
+                        
+                        <div class="container">
+                        <h4><b>Add new criminal</b></h4>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="heading">   </div>
+                </td>
+                
+            </tr>
+        </table>
+        
+        <br>
+        
+        </div>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+        <script>  
+            function disable_button()
+            {
+                
+                document.getElementById("det").disabled=true;
+                setTimeout(enable_button,10000)
+            }
+
+            function enable_button()
+            {
+                document.getElementById("det").disabled=false;
+                document.getElementById("sc").innerHTML="Scanned.";
+            }
+        </script>
+    </head>
+  <body onload="disable_button()">
+    <nav>
+        <!-- <a href="index.html"><img src="images/NITWLOGO.png"></a> -->
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="{{ url_for('tohome') }}">HOME</a></li>
+                <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <table>
+        <tr>
+            <td>
+                <div class="emptyspace">
+
+                </div>
+            </td>
+            <td>
+                <div class="emptyspace">
+
+                </div>
+            </td>
+            <td>
+                    <fieldset>
+                        <legend style="font-size:200%">
+                            FACE THE CAMERA  
+                        </legend>
+                        <div class="myvideo">
+                            <div class="col-lg-8  offset-lg-2">
+                                <div class="loader"></div><h2 id="sc" style="margin-left: 5%">Scanning...please wait</h2>
+                                <img src="{{ url_for('video_feed') }}" width="100%">
+                                
+                            </div>
+                        <br>
+                        <div style="float:left">
+                            <form action="/">
+                                <button type="submit" class="buttons">HOME</button>
+                            </form>
+                        </div>
+
+                        <div style="float:left">
+                            <form action="/success">
+                                <button id="det" type="submit" class="buttons">DETAILS</button>
+                            </form>
+                        </div>
+                        
+                    </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="heading"> 
+                    <p>
+
+                    </p>  </div>
+            </td>
+            
+        </tr>
+    </table>    
+    </body>
+
+
+</html>

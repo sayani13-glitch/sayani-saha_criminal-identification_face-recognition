@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    </head>
+<body>
+    <nav>
+        <!-- <a href="index.html"><img src="images/NITWLOGO.png"></a> -->
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="{{ url_for('tohome') }}">HOME</a></li>
+                <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <table>
+        <tr>
+            <div class="heading">
+
+            </div>
+        </tr>
+        <tr>
+            <td>
+                <div class="emptyspace">
+
+                </div>
+            </td>
+            <td>
+                <div class="emptyspace">
+
+                </div>
+            </td>
+            <td>
+                <div class="card">
+                    <fieldset style="padding-left:20%">
+                        <legend>
+                            CRIMINAL DETAILS
+                        </legend>
+                        <br>
+                        <br>
+                            <table style="border-color: aqua; border-style: double;">
+                                <tr>
+                                    <td>ID-   </td>
+                                    <td>{{ result[0][0] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>First Name-   </td>
+                                    <td>{{ result[0][1] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Second Name-   </td>
+                                    <td>{{ result[0][2] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Gender-   </td>
+                                    <td>{{ result[0][3] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Crime-   </td>
+                                    <td>{{ result[0][4] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Location-   </td>
+                                    <td>{{ result[0][5] }}</td>
+                                </tr>
+                            </table>
+                        <br>
+                        <form action="/">
+                            <button type="submit" class="buttons">HOME</button>
+                        </form>
+                    </fieldset>
+                    
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="heading"> 
+                    <p>
+
+                    </p>  </div>
+            </td>
+            
+        </tr>
+    </table>
+</body>
+
+</html>

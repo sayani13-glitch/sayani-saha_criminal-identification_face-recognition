@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <nav>
+            <!-- <a href="index.html"><img src="images/NITWLOGO.png"></a> -->
+            <div class="emptyspace"></div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="{{ url_for('tohome') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <table>
+            <tr>
+                <td>
+                    <div class="emptyspace">
+
+                    </div>
+                </td>
+                <td>
+                    <div class="emptyspace">
+
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <fieldset>
+                            <legend>
+                                ADD DETAILS
+                            </legend>
+                                <form action="/new_criminal" method="POST" enctype="multipart/form-data">
+                                    <br>
+                                <label>First Name</label>
+                                <input type="text" name="fname" placeholder="First Name" required><br><br>
+                                <br>
+                                <label>Second Name </label>
+                                <input type="text" name="lname" placeholder="Last Name" required><br><br>
+                                <br>
+                                <label>Gender </label>
+                                <input type="text" name="gen" placeholder="Gender" required><br><br>
+                                <br>
+                                <label>Crime </label>
+                                <input type="text" name="crime" placeholder="Crime" required><br><br>
+                                <br>
+                                <label>Location </label>
+                                <input type="text" name="loc" placeholder="Location" required><br><br>
+                                <br>
+                                <label>Upload Picture </label>
+                                <br>
+                                <input type="file" name="pic" required><br><br>
+                                <button type="submit" class="buttons">Register</button>
+                            </form>
+                            <br>
+                            <form action="/">
+                                <button type="submit" class="buttons">HOME</button>
+                            </form>
+                        </fieldset>
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="heading"> 
+                        <p>
+
+                        </p>  </div>
+                </td>
+                
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>

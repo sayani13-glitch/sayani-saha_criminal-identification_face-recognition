@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    </head>
+    <body>
+        <nav>
+            <div class="emptyspace"></div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="{{ url_for('tohome') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <table>
+            <tr>
+                <td>
+                    <div class="emptyspace">
+
+                    </div>
+                </td>
+                <td>
+                    <div class="emptyspace">
+
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <div class="box">
+                            <img src="/static/sayani.jpg"
+                            alt="immg";
+                            style="border-radius:50%;width:150px; "
+                            >
+                            <h2>SAYANI SAHA</h2>
+                            <p>
+                                Hello , I'm Sayani Saha , pursuing MCA from National Institute of Technology , Warangal.
+                                <br><br>
+                                This is my Criminal Identification WebApp.
+                                I've used HTML , CSS , JavaScript for the frontend and Python
+                                and MySQL at the backend. Face Recognition is implemented via the
+                                face-recognition and OpenCV python libraries.
+                                <br><br>
+                                My WebApp scans faces in real-time and checks for a match in the database.
+                                One can also add new criminal details in the database.
+                                <br><br>
+                            </p>
+                          </div >
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="heading"> 
+                        <p>
+
+                        </p>  </div>
+                </td>
+                
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>
